@@ -1,0 +1,99 @@
+body {
+  min-height: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+
+header {
+  background-color: steelblue;
+  height: 15vh;
+  margin-bottom: 2vh;
+}
+
+header > div {
+  border: tomato;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+  height: 100%;
+}
+
+.logo {
+  min-width: 15%;
+  text-align: center;
+}
+
+.menu {
+  min-width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu > a {
+  text-align: center;
+}
+
+.carrito {
+  min-width: 35%;
+  align-content: flex-end;
+  text-align: center;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 3vw;
+  row-gap: 3vh;
+}
+
+.main-grid > .card {
+  border: darkgreen;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  max-width: 100px;
+  min-height: 100px;
+  text-align: center;
+}
+
+.footer {
+  background-color: darkslategray;
+  color: whitesmoke;
+  text-align: center;
+  clear: both;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 5%;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 450px) {
+  .main-grid {
+    grid-template-columns: auto auto auto;
+  }
+  .main-grid > .card {
+    min-width: 33%;
+  }
+}
+@media only screen and (max-width: 300px) {
+  div.menu {
+    display: none;
+  }
+
+  .main-grid {
+    grid-template-columns: auto auto;
+  }
+
+  .main-grid > .card {
+    min-width: 50%;
+  }
+}
